@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Electron</title>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:"
+    />
+    <script src="https://kit.fontawesome.com/de4851ac23.js" crossorigin="anonymous"></script>
+    <link href="./assets/main.css" type="text/css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="parent">
+        <div class="sidebar">
+          <div class="logo-container">
+            <img id="logo" src="assets/51J67gj.png" alt="">
+          </div>
+          <div class="list-container">
+
+          </div>
+        </div>
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+             <span class="close">&times;</span>
+             <h3>Enter Note Name</h3>
+             <input type="text" id="noteName" placeholder="Enter note name...">
+             <button id="submitNote">Submit</button>
+          </div>
+         </div>
+        <div id="passwordModal" class="modal">
+          <div class="modal-content">
+             <span class="passClose">&times;</span>
+             <h3>Enter Note Password</h3>
+             <input type="text" id="notePass" placeholder="Enter password...">
+             <button id="submitPass">Submit</button>
+          </div>
+         </div>
+        <div class="main-container">
+          <div class="bg">
+            <img src="assets/hacker.webp" alt="">
+          </div>
+
+          <div class="chat">
+            <div style="display: flex; gap: 5px;">
+              <div id="newchat-button" class="newchat-button">
+                <h1>New Chat</h1>
+              </div>
+              
+              <div class="save-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-save"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+              </div>
+            </div>
+            
+            <div class="message-box">
+              <textarea id="message-input" type="text" class="message-input" placeholder="Type message..."></textarea>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./src/renderer.js"></script>
+  </body>
+</html>
